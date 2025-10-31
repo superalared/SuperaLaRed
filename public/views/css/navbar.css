@@ -1,0 +1,91 @@
+:root { --nav-h: 80px; }
+@media (max-width: 991.98px){ :root { --nav-h: 72px; } }
+@media (max-width: 575.98px){ :root { --nav-h: 64px; } }
+
+.navbar.fixed-top { z-index: 1040; }
+
+.brand-logo{
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,.6);
+  box-shadow: 0 0 12px rgba(51,179,255,.4);
+}
+.navbar .navbar-brand span{
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.navbar-nav .nav-link{
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  white-space: nowrap;
+  word-break: keep-all;
+  line-height: 1;
+  padding-inline: .25rem;
+  font-size: clamp(.84rem, 1.1vw, 1rem);
+}
+
+.navbar .nav-link i {
+  font-size: 1rem;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.navbar .nav-link.active-page {
+  color: #33b3ff !important;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(51,179,255,0.4);
+  border-bottom: 2px solid #33b3ff;
+}
+.navbar .nav-link.active-page:hover {
+  color: #66c8ff !important;
+  border-bottom-color: #66c8ff;
+}
+
+.navbar .nav-link[href^="tel:"] { white-space: nowrap; }
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .navbar-nav .nav-item { margin-left: .35rem; margin-right: .35rem; }
+  .navbar-nav .nav-link { font-size: clamp(.8rem, 1vw, .95rem); }
+}
+
+#toggle-accessible{
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  font-size: clamp(.84rem, 1vw, .95rem);
+}
+.nav-item-accessible {
+  margin-left: .35rem;
+  margin-right: .35rem;
+}
+
+@media (max-width: 991.98px){
+  .nav-item-accessible { margin: .25rem 0; }
+}
+
+/* FIX 991–1065px: compacta para evitar desbordes */
+@media (min-width: 992px) and (max-width: 1065px){
+  .navbar .navbar-brand span{
+    font-size: clamp(.95rem, 1.15vw, 1.05rem);
+  }
+  .navbar-nav .nav-item{
+    margin-left: .2rem;
+    margin-right: .2rem;
+  }
+  .navbar-nav .nav-link{
+    gap: .25rem;
+    padding-inline: .15rem;
+    font-size: clamp(.72rem, .85vw, .9rem);
+  }
+  .navbar .nav-link i{
+    font-size: .95rem;
+  }
+  #toggle-accessible{
+    padding: .25rem .5rem;
+  }
+}

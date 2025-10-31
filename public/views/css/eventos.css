@@ -1,0 +1,98 @@
+.ev-hero{
+  margin-top: calc(var(--nav-h, 80px) * -1);
+  padding: 4.5rem 0 2.5rem;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.25)),
+    url("../../img/hero5.jpg") center/cover no-repeat fixed;
+  color: #eaf6ff;
+  text-align: center;
+}
+.ev-title{
+  font-weight: 800;
+  font-size: clamp(1.8rem, 4.5vw, 2.6rem);
+  margin-bottom: .35rem;
+}
+.ev-subtitle{
+  opacity: .92;
+  margin-bottom: .85rem;
+}
+
+.event-card{
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 14px;
+  overflow: hidden;
+  height: 100%;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  display: flex;
+  flex-direction: column;
+}
+.event-card:hover{
+  transform: translateY(-2px);
+  border-color: rgba(102,200,255,.45);
+  box-shadow: 0 8px 24px rgba(51,179,255,.18);
+}
+
+.event-card__media{
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  overflow: hidden;
+  background: transparent;
+}
+.event-card__img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 576px){
+  .event-card__media{ height: 190px; }
+}
+
+.event-card__body{ padding: .9rem 1rem 1rem; }
+.event-card__title{
+  font-weight: 700;
+  margin: 0 0 .35rem;
+}
+.event-meta{
+  font-size: .95rem;
+  opacity: .9;
+}
+.event-actions{
+  display: flex;
+  gap: .5rem;
+  padding: .75rem 1rem 1rem;
+}
+
+.badge-evt{
+  text-transform: uppercase;
+  letter-spacing: .03em;
+}
+.badge-sorteo{ background: #ffd54f; color: #222; }
+.badge-torneo{ background: #80deea; color: #0a1720; }
+
+#eventos-empty, #eventos-error{ border-radius: 10px; }
+
+body.accessible-mode .ev-hero{
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.75), rgba(255,255,255,.65)),
+    url("../../img/hero6.jpg") center/cover no-repeat fixed;
+  color: #111;
+}
+body.accessible-mode .event-card{
+  background: #fff;
+  border-color: rgba(0,0,0,.12);
+  box-shadow: 0 2px 16px rgba(0,0,0,.08);
+}
+
+body { scroll-padding-top: 80px; }
+
+.ev-hero { padding-top: 12rem; }
+
+@media (min-width: 992px){
+  .event-card__img{
+    object-fit: contain;
+    background: transparent;
+  }
+}

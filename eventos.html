@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Eventos, sorteos y torneos de pádel | SuperaLaRed</title>
+  <meta name="description" content="Consulta los próximos eventos, sorteos y torneos de pádel organizados por SuperaLaRed. Fechas, lugares y detalles actualizados." />
+  <link rel="canonical" href="https://superalared.com/eventos.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SuperaLaRed" />
+  <meta property="og:title" content="Eventos, sorteos y torneos de pádel | SuperaLaRed" />
+  <meta property="og:description" content="Consulta los próximos eventos, sorteos y torneos de pádel organizados por SuperaLaRed." />
+  <meta property="og:url" content="https://superalared.com/eventos.html" />
+  <meta property="og:image" content="https://superalared.com/public/img/hero5.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <meta name="theme-color" content="#0b0f14" />
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://plausible.io" crossorigin>
+  <link rel="icon" href="public/img/LOGO SUPERALARED.jpeg" type="image/jpeg" />
+
+  <link rel="preload" as="image" href="public/img/hero5.jpg" imagesrcset="public/img/hero5.jpg" />
+
+  <link rel="stylesheet" href="public/views/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="public/views/css/navbar.css" />
+  <link rel="stylesheet" href="public/views/css/eventos.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <script defer data-domain="superalared.com, luisrebo.github.io" src="https://plausible.io/js/script.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Eventos de pádel | SuperaLaRed",
+    "url": "https://superalared.com/eventos.html",
+    "description": "Listado de eventos, sorteos y torneos de pádel de SuperaLaRed."
+  }
+  </script>
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <header class="ev-hero">
+    <div class="container text-center">
+      <h1 class="ev-title">Sorteos y Torneos</h1>
+      <p class="ev-subtitle">Vive el pádel más allá de la pista.</p>
+    </div>
+  </header>
+
+  <main id="eventos" class="container my-5">
+    <div id="eventos-grid" class="row g-3"></div>
+
+    <div id="eventos-empty" class="alert alert-info d-none mt-3" role="status" aria-live="polite">
+      No hay eventos publicados por ahora.
+    </div>
+
+    <div id="eventos-error" class="alert alert-danger d-none mt-3" role="alert" aria-live="assertive">
+      No se pudieron cargar los eventos. Inténtalo más tarde.
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="public/js/navbar.js"></script>
+  <script src="public/js/eventos.js"></script>
+</body>
+</html>

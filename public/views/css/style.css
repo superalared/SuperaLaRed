@@ -1,0 +1,60 @@
+html, body { min-height: 100%; }
+body {
+  background: url("../../img/hero1.jpg") center center / cover no-repeat fixed;
+  color: #fff;
+}
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  background-image: url("../../img/hero7.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.hero .overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.5); }
+.hero .z-1 { position: relative; z-index: 1; }
+
+body { padding-top: var(--nav-h); }
+
+#contacto { padding: 4rem 0; color: #fff; }
+#contacto .form-control { background-color: rgba(255,255,255,0.9); border: none; }
+#contacto .form-control:focus { box-shadow: 0 0 0 0.2rem rgba(255,255,255,0.4); }
+#contacto button.btn-primary { font-weight: 600; border: none; }
+#contacto button.btn-primary:hover { background-color: #e6e6e6; color: #000; }
+
+.contact-transparent { background: none !important; color: #fff; border: none; }
+.contact-transparent .container { max-width: 600px; background: rgba(0,0,0,0.4); padding: 2rem; border-radius: 10px; }
+
+.whatsapp-float {
+  position: fixed; left: 90%; top: 90%; transform: translate(-50%, -50%);
+  width: clamp(60px, 5vw, 110px); height: clamp(60px, 5vw, 110px);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  background: #25D366; color: #fff; text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  z-index: 900; transition: background 0.3s ease, transform 0.2s ease;
+}
+.whatsapp-float:hover { background: #1ebe5d; transform: translate(-50%, -50%) scale(1.05); }
+.whatsapp-float i { font-size: clamp(28px, 3vw, 48px); }
+
+@media (max-width: 1200px) and (min-width: 768px) {
+  .hero { height: auto; padding-top: 8rem; padding-bottom: 4rem; }
+  .hero h1 { font-size: 2.5rem; line-height: 1.2; }
+  .hero p.lead { font-size: 1.2rem; }
+}
+@media (max-width: 767px) {
+  .hero { height: auto; padding-top: 7rem; padding-bottom: 3rem; }
+  .hero h1 { font-size: 2rem; line-height: 1.2; }
+  .hero p.lead { font-size: 1rem; }
+}
+@media (max-height: 750px) {
+  .hero h1 { font-size: 2.2rem; line-height: 1.2; }
+  .hero p.lead { font-size: 1.1rem; }
+  #contacto { padding: 2rem 0; }
+}
+@media (max-width: 545px) {
+  .hero { height: auto; padding-top: 12rem; padding-bottom: 4rem; }
+  .hero h1 { font-size: 1.6rem; line-height: 1.2; }
+  .hero p.lead { font-size: 1rem; }
+}

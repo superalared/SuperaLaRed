@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Clases de pádel en tu urbanización | SuperaLaRed</title>
+  <meta name="description" content="Clases de pádel a domicilio en tu urbanización. Entrena sin desplazarte, con metodología clara y adaptable. Contacta y reserva tu plaza." />
+  <link rel="canonical" href="https://superalared.com/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SuperaLaRed" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:title" content="Clases de pádel en tu urbanización | SuperaLaRed" />
+  <meta property="og:description" content="Clases de pádel a domicilio en tu urbanización. Entrena sin desplazarte y mejora tu juego." />
+  <meta property="og:url" content="https://superalared.com/" />
+  <meta property="og:image" content="https://superalared.com/public/img/social-card-index.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Clases de pádel en tu urbanización | SuperaLaRed" />
+  <meta name="twitter:description" content="Clases de pádel a domicilio en tu urbanización. Entrena sin desplazarte y mejora tu juego." />
+  <meta name="twitter:image" content="https://superalared.com/public/img/social-card-index.jpg" />
+
+  <meta name="theme-color" content="#0b0f14" />
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://plausible.io" crossorigin>
+
+  <link rel="icon" href="public/img/LOGO SUPERALARED.jpeg" type="image/jpeg" />
+  <link rel="preload" as="image" href="public/img/hero7.jpg" imagesrcset="public/img/hero7.jpg" />
+
+  <link rel="stylesheet" href="public/views/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="public/views/css/navbar.css" />
+  <link rel="stylesheet" href="public/views/css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <script defer data-domain="superalared.com, luisrebo.github.io" src="https://plausible.io/js/script.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"SuperaLaRed",
+    "url":"https://superalared.com/",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://superalared.com/?q={search_term_string}",
+      "query-input":"required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <div id="navbar-placeholder" aria-label="Barra de navegación"></div>
+
+  <section class="hero d-flex align-items-center justify-content-center text-white text-center">
+    <div class="overlay" aria-hidden="true"></div>
+    <div class="container position-relative z-1">
+      <h1 class="display-4 fw-bold mb-4">“Más allá de la red está tu mejor versión”</h1>
+      <p class="lead mb-5">Clases de pádel en tu urbanización, sin desplazamientos.</p>
+
+      <section id="contacto" class="contact-transparent" aria-labelledby="contacto-title">
+        <div class="container">
+          <h2 id="contacto-title" class="text-center mb-4">Contáctanos</h2>
+          <div class="row justify-content-center">
+            <div class="col-lg-6">
+              <form id="contactForm" action="https://formspree.io/f/xrbygqdq" method="POST" novalidate>
+                <input type="hidden" name="_subject" value="Nuevo contacto desde SuperaLaRed" />
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" />
+
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" name="nombre" required autocomplete="given-name" />
+                  <div class="invalid-feedback">Por favor, indica tu nombre.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="apellidos" class="form-label">Apellidos</label>
+                  <input type="text" class="form-control" id="apellidos" name="apellidos" required autocomplete="family-name" />
+                  <div class="invalid-feedback">Por favor, indica tus apellidos.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="telefono" class="form-label">Teléfono</label>
+                  <input type="tel" class="form-control" id="telefono" name="telefono"
+                         inputmode="tel" autocomplete="tel"
+                         placeholder="+34 600 000 000"
+                         pattern="^\\+?\\d[\\d\\s-]{6,}$"
+                         required />
+                  <div class="invalid-feedback">Introduce un número de teléfono válido.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="email" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control" id="email" name="email" required inputmode="email" autocomplete="email" />
+                  <div class="invalid-feedback">Introduce un email válido.</div>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100" id="contactSubmit">Enviar</button>
+
+                <div id="formMsg" class="alert d-none mt-3" role="alert" aria-live="polite"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <a href="https://wa.me/34642521446" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat en WhatsApp">
+    <i class="bi bi-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="public/js/navbar.js"></script>
+  <script src="public/js/formulario.js"></script>
+</body>
+</html>

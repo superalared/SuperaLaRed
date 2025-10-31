@@ -1,0 +1,88 @@
+:root{
+  --neon:#33b3ff;
+  --neon-soft:#66c8ff;
+  --bg-overlay: rgba(0,0,0,0.55);
+  --text:#eaf6ff;
+  --title:#ffffff;
+}
+
+/* Asegura que el navbar esté SIEMPRE por encima en esta página */
+.navbar.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000; /* > 1040 por si hay stacking contexts de efectos neon/backdrop */
+}
+
+body{ padding-top: var(--nav-h); }
+
+.sobre-hero{
+  background:
+    linear-gradient(var(--bg-overlay), var(--bg-overlay)),
+    url("../../img/hero6.jpg") center/cover no-repeat fixed;
+  padding-top: clamp(2rem, 6vh, 4rem);
+  padding-bottom: clamp(4rem, 10vh, 8rem);
+  min-height: 100vh;
+  color: var(--text);
+  position: relative;
+}
+
+.neon-title{
+  color: var(--title);
+  text-shadow: 0 0 10px var(--neon), 0 0 20px var(--neon), 0 0 40px var(--neon-soft);
+  letter-spacing: .5px;
+  margin-bottom: clamp(1.5rem, 3vh, 2.5rem);
+  animation: neonPulse 3.5s ease-in-out infinite;
+}
+
+.neon-card{
+  position: relative;
+  background: rgba(10,16,26,0.45);
+  border-radius: 16px;
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+  color: var(--text);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(102,200,255,0.35);
+  box-shadow: 0 0 0 1px rgba(102,200,255,0.15) inset, 0 0 24px rgba(51,179,255,0.25);
+  transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+.neon-card::before{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  border-radius: inherit;
+  pointer-events:none;
+  background:
+    radial-gradient(120px 120px at 10% 10%, rgba(51,179,255,.35), transparent 60%),
+    radial-gradient(160px 160px at 90% 20%, rgba(102,200,255,.25), transparent 65%),
+    radial-gradient(140px 140px at 50% 100%, rgba(51,179,255,.2), transparent 65%);
+  mix-blend-mode: screen;
+  opacity:.85;
+  transition: opacity .35s ease;
+}
+.neon-card:hover{
+  transform: translateY(-6px);
+  border-color: rgba(102,200,255,0.65);
+  box-shadow: 0 0 0 1px rgba(102,200,255,0.35) inset, 0 10px 40px rgba(51,179,255,0.45);
+}
+.neon-card:hover::before{ opacity: 1; }
+.neon-card__title{
+  margin-bottom: .75rem;
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 0 0 6px rgba(51,179,255,.6), 0 0 16px rgba(51,179,255,.35);
+}
+.neon-card__text{ margin: 0; color: var(--text); line-height: 1.6; }
+
+.container{ padding-left: clamp(12px, 4vw, 48px) !important; padding-right: clamp(12px, 4vw, 48px) !important; }
+.row.g-4{ row-gap: clamp(1rem, 3vh, 2rem); }
+
+@keyframes neonPulse{
+  0%,100%{ text-shadow: 0 0 10px var(--neon), 0 0 20px var(--neon), 0 0 40px var(--neon-soft); }
+  50%{ text-shadow: 0 0 6px var(--neon), 0 0 14px var(--neon), 0 0 28px var(--neon-soft); }
+}
+
+@media (max-width: 992px){ .neon-title{ font-size: clamp(1.8rem, 4vw, 2.2rem); } }
+@media (max-width: 576px){ .neon-card{ padding: 1rem 1rem 1.1rem; } }
