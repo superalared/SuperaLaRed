@@ -58,3 +58,22 @@ body { padding-top: var(--nav-h); }
   .hero h1 { font-size: 1.6rem; line-height: 1.2; }
   .hero p.lead { font-size: 1rem; }
 }
+.brand-intro { opacity: .95; }
+/* Texto de marca sutil en el bloque de contacto */
+.brand-intro{
+  color: rgba(255,255,255,.7);   /* similar a text-white-50 pero un poco más legible */
+  font-size: .95rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Asegura contraste del footer sobre fondos oscuros */
+footer small { color: rgba(255,255,255,.6); }
+/* Footer consistente, sin imagen de fondo */
+.site-footer{
+  background:#0b0f14;                 /* mismo tono oscuro del sitio */
+  border-top:1px solid rgba(255,255,255,.08);
+  color: rgba(255,255,255,.6);
+}
+.site-footer small{ color: rgba(255,255,255,.6); }
